@@ -52,8 +52,9 @@ CUDA_VISIBLE_DEVICES=0 python tasks/run.py --config "egs/datasets/audio/vctk/dpg
 ```
 
 ### 6. Pretrained checkpoints
-- TTS module trained on 160k [[Download]](https://works.do/xsBlIw8)
-- Diffusion-based prosody generator trained on 320k [[Download]](https://works.do/5CAF6E0)
+- TBA
+<!-- - TTS module trained on 160k [[Download]](https://works.do/xsBlIw8)
+- Diffusion-based prosody generator trained on 320k [[Download]](https://works.do/5CAF6E0) -->
 
 ## Acknowledgements
 **Our codes are based on the following repos:**
