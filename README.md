@@ -48,7 +48,7 @@ CUDA_VISIBLE_DEVICES=0 python tasks/run.py --config "egs/datasets/audio/vctk/dpg
 ### 5. Inference
 
 ```bash
-CUDA_VISIBLE_DEVICES=0 python tasks/run.py --config "egs/datasets/audio/vctk/prosody_generator.yaml" --exp_name "DiffProsodyGenerator" --infer --hparams="tts_model=/{ckpt dir}/DiffProsody"
+CUDA_VISIBLE_DEVICES=0 python tasks/run.py --config "egs/datasets/audio/vctk/dpg.yaml" --exp_name "DiffProsodyGenerator" --infer --hparams="tts_model=/{ckpt dir}/DiffProsody"
 ```
 
 ### 6. Pretrained checkpoints
