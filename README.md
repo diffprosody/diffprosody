@@ -31,18 +31,18 @@ python data_gen/tts/runs/binarize.py --config "egs/datasets/audio/vctk/diffproso
 ### 2. Training TTS module and prosody encoder  
 ```bash
 export PYTHONPATH=.
-CUDA_VISIBLE_DEVICES=0 python tasks/run.py --config "egs/datasets/audio/vctk/diffprosody.yaml" --exp_name "DiffProsody"
+CUDA_VISIBLE_DEVICES=0 python tasks/run.py --config "egs/datasets/audio/vctk/dp.yaml" --exp_name "DiffProsody"
 ```
 
 ### 3. Extracting latent prosody vector 
 ```bash
-CUDA_VISIBLE_DEVICES=0 python extract_lpv.py --config "egs/datasets/audio/vctk/diffprosody.yaml" --exp_name "DiffProsody"
+CUDA_VISIBLE_DEVICES=0 python extract_lpv.py --config "egs/datasets/audio/vctk/dp.yaml" --exp_name "DiffProsody"
 ```
 
 ### 4. Training diffusion-based latent prosody generator
 - You should set the path according to your environment
 ```bash
-CUDA_VISIBLE_DEVICES=0 python tasks/run.py --config "egs/datasets/audio/vctk/prosody_generator.yaml" --exp_name "DiffProsodyGenerator" --reset --hparams="tts_model=/{ckpt dir}/DiffProsody"
+CUDA_VISIBLE_DEVICES=0 python tasks/run.py --config "egs/datasets/audio/vctk/dpg.yaml" --exp_name "DiffProsodyGenerator" --reset --hparams="tts_model=/{ckpt dir}/DiffProsody"
 ```
 
 ### 5. Inference
